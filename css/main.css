@@ -11,10 +11,16 @@
    ========================================================================== */
 
 html {
+    box-sizing: border-box;
     color: #222;
     font-size: 1em;
     line-height: 1.4;
 }
+
+*, *:before, *:after{
+  box-sizing: inherit;
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
@@ -96,6 +102,146 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+body{
+  margin: 0 auto;
+  padding: 3 0;
+  font-family: sans-serif;
+  line-height: 1.5;
+
+}
+
+img{
+  max-width: 100%;
+  display: block;
+}
+
+
+.main-nav{
+  display: none;
+}
+
+.page-header{
+  position: relative;
+  padding: 1em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: blue;
+  color: #fff;
+}
+
+.page-header h1{
+  margin: 0;
+  font-size: 1.5em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.page-header .nav-icon{
+  position: absolute;
+  left: 1em;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.main-content{
+  margin: 3em auto;
+  padding: 1em;
+  max-width: 960px;
+}
+
+.nav-open{
+  overflow: hidden;
+}
+
+.nav-open .main-nav{
+  display: block;
+  position: absolute;
+  margin: 3em auto;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  width: 50%;
+  min-height: 100%;
+}
+
+.nav-open .page-content{
+  transform: translateX(50%);
+  border: 1px solid purple;
+}
+
+.main-nav{
+  background-color: purple;
+  color: red;
+  font-weight: bold;
+}
+
+.main-nav ul{
+  list-style: none;
+}
+
+.main-nav li{
+  margin: 1em 0;
+  position: relative;
+}
+
+.main-nav a{
+  color: red;
+  text-decoration: none;
+}
+
+.main-nav .close-nav{
+  font-style: normal;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  line-height: 1;
+  color: red;
+  cursor: pointer;
+}
+
+.main-nav li{
+  border:1px solid yellow:
+}
+.main-nav li.active:before{
+content: '';
+display: block;
+border: .5rem solid red;
+border-top-color: transparent;
+border-bottom-color: transparent;
+border-right-color: transparent;
+position: absolute;
+top: 50%;
+left: -1em;
+transform: translateY(-50%);
+}
+
+.nav-open .page-content{
+  transform: translateX(50%);
+}
+
+.nav-open .page-content:before{
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(1, 99%, 50%, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 150;
+}
+
+
+
+
+
+
+
+
 
 
 
