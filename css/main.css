@@ -103,8 +103,6 @@ textarea {
    Author's custom styles
    ========================================================================== */
 body{
-  margin: 0 auto;
-  padding: 3 0;
   font-family: sans-serif;
   line-height: 1.5;
 
@@ -141,6 +139,7 @@ img{
 }
 
 .page-header .nav-icon{
+  cursor: pointer;
   position: absolute;
   left: 1em;
   top: 50%;
@@ -153,39 +152,21 @@ img{
   max-width: 960px;
 }
 
-.nav-open{
-  overflow: hidden;
-}
-
-.nav-open .main-nav{
-  display: block;
-  position: absolute;
-  margin: 3em auto;
-  top: 0;
-  left: 0;
-  border: 1px solid red;
-  width: 50%;
-  min-height: 100%;
-}
-
-.nav-open .page-content{
-  transform: translateX(50%);
-  border: 1px solid purple;
-}
-
 .main-nav{
+  display: none;
+  position: relative;
   background-color: purple;
   color: red;
   font-weight: bold;
 }
 
 .main-nav ul{
+  margin-top: 1.5em;
   list-style: none;
 }
 
 .main-nav li{
   margin: 1em 0;
-  position: relative;
 }
 
 .main-nav a{
@@ -193,10 +174,10 @@ img{
   text-decoration: none;
 }
 
-.main-nav .close-nav{
+.main-nav .close-icon{
   font-style: normal;
   position: absolute;
-  top: 1em;
+  top: .9rem;
   right: 1em;
   line-height: 1;
   color: red;
@@ -206,6 +187,7 @@ img{
 .main-nav li{
   border:1px solid yellow:
 }
+
 .main-nav li.active:before{
 content: '';
 display: block;
@@ -214,12 +196,27 @@ border-top-color: transparent;
 border-bottom-color: transparent;
 border-right-color: transparent;
 position: absolute;
+left: -.75em;
 top: 50%;
-left: -1em;
 transform: translateY(-50%);
 }
 
+.nav-open{
+  overflow: hidden;
+}
+
+.nav-open .main-nav{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid red;
+  width: 50%;
+  min-height: 100%;
+}
+
 .nav-open .page-content{
+  border: 1px solid purple;
   transform: translateX(50%);
 }
 
